@@ -1,5 +1,5 @@
-# 2.0.0 Assignment - Intro To DOM Manipulation
-- [2.0.0 Assignment - Intro To DOM Manipulation](#200-assignment---intro-to-dom-manipulation)
+# 2.2.0 Assignment - Intro To DOM Manipulation
+- [2.2.0 Assignment - Intro To DOM Manipulation](#220-assignment---intro-to-dom-manipulation)
   - [Before you start](#before-you-start)
   - [New testing](#new-testing)
   - [Prompts](#prompts)
