@@ -20,11 +20,14 @@ Since we can't call any of your functions directly, there will be the temptation
 
 The pattern we're going to adopt for now is the `runner pattern`, which you may remember from some early labs. It's where you write small focused functions, and then we call them in a larger function. In this case `main`. We've outlined this pattern for you already so you can see it.
 
-# CRUD to the rescue
+## CRUD to the rescue
 Feeling overwhelmed by all the things the DOM can do? Whenever you're learning a new piece of tech, a helpful guiding light is CRUD. Can you create an element? Read data from an element? Update an element? And finally, can you delete an element?
 Those actions (and a little more) are going to be our goals today.
 
 Alright, let's get going!
+
+# Short Answers
+These are cool topics! You may need to Google a bit, but they're good concepts to be familiar with.
 
 # Question 1: getMainHeadingText - modify.js (CREATE)
 In the function `getMainHeadingText`, use the `querySelector` to grab the `H1` by it's `id`. Then, console.log the text of the element.
