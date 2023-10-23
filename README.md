@@ -6,8 +6,8 @@
   - [To get func-y or not?](#to-get-func-y-or-not)
   - [CRUD to the rescue](#crud-to-the-rescue)
 - [Short Answers](#short-answers)
-- [Question 1: getMainHeadingText - modify.js (CREATE)](#question-1-getmainheadingtext---modifyjs-create)
-- [Question 2: getAllMainText - modify.js (CREATE)](#question-2-getallmaintext---modifyjs-create)
+- [Question 1: getMainHeadingText - modify.js (READ)](#question-1-getmainheadingtext---modifyjs-read)
+- [Question 2: getAllMainText - modify.js (READ)](#question-2-getallmaintext---modifyjs-read)
 - [Question 3: setSubtitleText - modify.js (UPDATE)](#question-3-setsubtitletext---modifyjs-update)
 - [Question 4: modifyDivClassList - modify.js (UPDATE)](#question-4-modifydivclasslist---modifyjs-update)
 - [Question 5: add H2 - modify.js (CREATE)](#question-5-add-h2---modifyjs-create)
@@ -46,13 +46,13 @@ Alright, let's get going!
 # Short Answers
 These are cool topics! You may need to Google a bit, but they're good concepts to be familiar with.
 
-# Question 1: getMainHeadingText - modify.js (CREATE)
+# Question 1: getMainHeadingText - modify.js (READ)
 In the function `getMainHeadingText`, use the `querySelector` to grab the `H1` by it's `id`. Then, console.log the text of the element.
 
 https://www.w3schools.com/jsref/met_document_queryselector.asp (read all of this, its a good one)
 https://www.w3schools.com/jsref/prop_node_textcontent.asp
 
-# Question 2: getAllMainText - modify.js (CREATE)
+# Question 2: getAllMainText - modify.js (READ)
 In the function `getAllMainText` you'll need to grab *all* the elements with the class of `main-text`. Then, iterate through them so you can build a new string value. The new string value should be all the individual element's text contents, separated only by commas, no spaces! Finally, log that new string to the console.
 
 https://www.w3schools.com/jsref/met_document_queryselectorall.asp
@@ -95,9 +95,9 @@ https://www.w3schools.com/jsref/met_element_remove.asp
 # Question 7: makeAlphabet - modify.js
 Here is where things get interesting. We're going to do a bunch of stuff!
 
-First, notice that there's a data attribute called `num-letters` on our alphabet list `ul` element. Read from that using JS to get the number of letters we want to add.
+First, notice that there's a data attribute called `num-letters` on our alphabet list `ul` element. Data attributes are a great way to encode more information into a tag. We didn't cover them, but we've included resources to check out.
 
-Then, using our create, update, add pattern, loop through and add `li`s with text content of `A is letter #1 in the alphabet`. No need to put `id`s or `class`es on the `li`s. But they *must* be children of the `#alphabet` `ul` tag.
+Your job is to read from the data attribute using JS to get the number of letters we want to add. Then, using our create, update, add pattern, loop through and add `li`s with text content like: `A is letter #1 in the alphabet`. No need to put `id`s or `class`es on the `li`s. But they *must* be children of the `#alphabet` `ul` tag.
 
 This one is tricky, so we'll be helpful. If the dataset attribute is 3, then the list in the html would print:
 
@@ -107,7 +107,21 @@ B is letter #2 in the alphabet
 C is letter #3 in the alphabet
 ```
 
-https://www.w3schools.com/tags/att_data-.asp
+Remember, each one of those lines is in an `li` tag.
+
+Here's a *super* quick tutorial
+
+```html
+<p id="main-text" data-my-test="hello there">Just a p tag</p>
+```
+
+```js
+const p = document.querySelector('#main-text');
+console.log(p.dataset.myTest); // logs: hello there
+// notice how it's camel cased the data-my-test to myTest
+```
+
+And here's [*everything* you'd ever need to know about data attributes](https://css-tricks.com/a-complete-guide-to-data-attributes/#attributes-javascript), focus on part 4, which is the JS part.
 
 # Question 8: makeBio
 Ok, so for dynamic information or user entered info, the create, update, add pattern is safest. However, what if you have a big blob of HTML that *you* know is safe, and you want to insert it? Try the `.innerHTML` property.
