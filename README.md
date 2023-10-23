@@ -1,4 +1,21 @@
-# Assignment 1: DOM Manipulation Practice
+# 2.0.0 Assignment - Intro To DOM Manipulation
+- [2.0.0 Assignment - Intro To DOM Manipulation](#200-assignment---intro-to-dom-manipulation)
+  - [Before you start](#before-you-start)
+  - [New testing](#new-testing)
+  - [Prompts](#prompts)
+  - [To get func-y or not?](#to-get-func-y-or-not)
+  - [CRUD to the rescue](#crud-to-the-rescue)
+- [Short Answers](#short-answers)
+- [Question 1: getMainHeadingText - modify.js (CREATE)](#question-1-getmainheadingtext---modifyjs-create)
+- [Question 2: getAllMainText - modify.js (CREATE)](#question-2-getallmaintext---modifyjs-create)
+- [Question 3: setSubtitleText - modify.js (UPDATE)](#question-3-setsubtitletext---modifyjs-update)
+- [Question 4: modifyDivClassList - modify.js (UPDATE)](#question-4-modifydivclasslist---modifyjs-update)
+- [Question 5: add H2 - modify.js (CREATE)](#question-5-add-h2---modifyjs-create)
+- [Question 6: removeOldInfo - modify.js (DELETE)](#question-6-removeoldinfo---modifyjs-delete)
+- [Question 7: makeAlphabet - modify.js](#question-7-makealphabet---modifyjs)
+- [Question 8: makeBio](#question-8-makebio)
+- [Question 9: Make it from scratch!](#question-9-make-it-from-scratch)
+- [BONUS - next steps](#bonus---next-steps)
 
 ## Before you start
 This is exciting! But a lot has changed! You're now dealing with a GUI and the tests look different, and there are so many new Browser APIs and DOM methods to learn.
@@ -112,9 +129,11 @@ https://www.w3schools.com/jsref/prop_html_innerhtml.asp
 Just be *careful* with `innerHTML` and use it wisely! It can be a big help, or it can *super* hurt you. Never use it with unescaped user generated input.
 
 # Question 9: Make it from scratch!
-So that's all good and all, but we want to be sure that you know how to set up your *own* projects as well! To that end, you must make in the `src` directory an `index.html` file and an `index.js` file.
+So everything we just did was great, but we want to be sure that you know how to set up your *own* projects as well! To that end, in the `src` directory, you must fill in the `index.html` and `index.js` file.
 
-The `index.html` file should be an html document, but nothing in the body except a script tag that links to your `index.js`. Now, in whatever manner you want, your `index.js` file must:
+The `index.html` file should be an html document, but *nothing* in the body except a script tag that links to your `index.js`. (we know you can also add scripts to the head, but let's keep it simple here and add it to the body).
+
+Now, in whatever manner you want, your `index.js` file must:
 
 - add an `H1` to the `body` with an `id` of `main-heading` and text of `Hello world!`
 - add a `p` tag with an `id` of `main-text`, a class of `boring-text`, and text that reads "Look I'm some text!"
