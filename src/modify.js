@@ -22,6 +22,7 @@ const makeAlphabet = () => {
 const makeBio = () => {
 };
 
+// "runner" function
 const main = () => {
   // read
   getMainHeadingText();
@@ -42,4 +43,5 @@ const main = () => {
   makeBio();
 };
 
-main();
+// invoke the runner!
+main(); 
