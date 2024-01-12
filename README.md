@@ -40,11 +40,13 @@ As we said, there's so much to learn! So our question prompts are going to tell 
 Maybe you learned what you needed to in lecture, but maybe not! Follow the links to learn what you need.
 
 ## To get func-y or not?
-Since we can't call any of your functions directly, there will be the temptation to just write all your code in the global space and be unorganized. **Do not give in.** Well structured code is *critical* to working on a team.
+Without imports/exports, we can't call your functions directly in tests. And since we can't call any of your functions directly, there will be the temptation to just write all your code in the global space and be unorganized. **Do not give in.** Well structured code is *critical* to working on a team.
 
 The pattern we're going to adopt for now is the `runner pattern`, which you may remember from some early labs. It's where you write small focused functions, and then we call them in a larger function. In this case `main`. 
 
 In `modify.js`, we've outlined this pattern for you already so you can see it. Try to mimic this pattern when you create your `index.js` file from scratch!
+
+**But most importantly, in order for your tests to pass, you must actually call functions in modify.js and index.js**. So in modify, do not delete the `main` function that we gave you! Basically, in your own browser, if you can see the changes to the html, you're ok. 
 
 ## CRUD to the rescue
 Feeling overwhelmed by all the things the DOM can do? Whenever you're learning a new piece of tech, a helpful guiding light is CRUD. Can you...
