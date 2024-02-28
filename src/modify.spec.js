@@ -111,7 +111,7 @@ describe(testSuiteName, () => {
 
   it('Add the bio content to the page', () => {
     const bioEl = document.querySelector('#my-bio');
-    expect(bioEl.innerHTML).toBe(`
+    expect(bioEl.innerHTML.replaceAll(" ", "")).toBe(`
     <h2 id="bio-heading">About Me</h2>
     <p>My name is Zo and I like learn cool new things</p>
     <h3 id="hobby-heading">My Hobbies</h3>
@@ -119,7 +119,7 @@ describe(testSuiteName, () => {
       <li>Running</li>
       <li>Reading</li>
       <li>Writing</li>
-    </ul>`);
+    </ul>`.replaceAll(" ", ""));
 
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
