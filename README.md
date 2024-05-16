@@ -153,13 +153,13 @@ Remember, each one of those lines is in an `li` tag.
 
 
 # Question 8: makeBio
-Ok, so for dynamic information or user entered info, the create, update, add pattern is safest. However, what if you have a big blob of HTML that *you* know is safe, and you want to insert it? Try the `.innerHTML` property.
+Ok, so for dynamic information or user-entered info, the create, update, add pattern is safest. However, what if you have a big blob of HTML that *you* know is safe, and you want to insert it? Try the `.innerHTML` property.
 
-The `makeBio` method should set the inner html of the `#my-bio` div to be this exactly:
+The `makeBio` function should set the inner html of the `#my-bio` div to be this exactly:
 
 ```html
 <h2 id="bio-heading">About Me</h2>
-<p>My name is Zo and I like learn cool new things</p>
+<p>My name is Zo and I like to learn cool new things</p>
 <h3 id="hobby-heading">My Hobbies</h3>
 <ul>
   <li>Running</li>
