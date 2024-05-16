@@ -36,7 +36,7 @@ describe(testSuiteName, () => {
   let log;
   beforeEach(() => {
     document.documentElement.innerHTML = htmlSnippet;
-    log = jest.spyOn(window.console, 'log').mockImplementation(() => {});
+    log = jest.spyOn(window.console, 'log').mockImplementation(() => { });
     jest.resetModules();
     require('./modify');
 
@@ -111,15 +111,20 @@ describe(testSuiteName, () => {
 
   it('Add the bio content to the page', () => {
     const bioEl = document.querySelector('#my-bio');
-    expect(bioEl.innerHTML.replaceAll(" ", "")).toBe(`
-    <h2 id="bio-heading">About Me</h2>
-    <p>My name is Zo and I like learn cool new things</p>
-    <h3 id="hobby-heading">My Hobbies</h3>
-    <ul>
-      <li>Running</li>
-      <li>Reading</li>
-      <li>Writing</li>
-    </ul>`.replaceAll(" ", ""));
+
+    // remove all white spaces and line breaks to look ONLY at the structure
+    const bioElInnerHTML = bioEl.innerHTML.replaceAll(" ", "").replaceAll("\n", "");
+    const resultingStructure = `
+      <h2 id="bio-heading">About Me</h2>
+      <p>My name is Zo and I like to learn cool new things</p>
+      <h3 id="hobby-heading">My Hobbies</h3>
+      <ul>
+        <li>Running</li>
+        <li>Reading</li>
+        <li>Writing</li>
+      </ul>`.replaceAll(" ", "").replaceAll("\n", "");
+
+    expect(bioElInnerHTML).toBe(resultingStructure);
 
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
